@@ -40,7 +40,8 @@ object ListExercises {
 
   }
 
-  def rm(xs: List[Int], value: Int): List[Int] = xs match {
+  // auxiliary method that returns the list without the value
+  private def rm(xs: List[Int], value: Int): List[Int] = xs match {
     case `value` :: tail =>  tail
     case x :: tail => x :: rm(tail, value)
     case _ => Nil
@@ -56,6 +57,17 @@ object ListExercises {
       val r1: List[Int] = List(l.max)
       val r2: List[Int] = n_biggest(n - 1, rm(l, l.max))
       r2 ++ r1
+    }
+  }
+
+  // count the number of occurrences of v in list
+  def count_occurrences(v: Int, l: List[Int]): Int ={
+    if(l.isEmpty){
+      0
+    }else if(l.head != v){
+      count_occurrences(v, l.tail)
+    }else{
+      1 + count_occurrences(v, l.tail)
     }
   }
 }
