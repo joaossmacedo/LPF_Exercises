@@ -22,15 +22,15 @@ object ListExercises {
     }
   }
 
-  // return the bigger element
+  // return the biggest element
   // can'' use l.max()
-  def bigger(l: List[Int]): Int = {
+  def biggest(l: List[Int]): Int = {
     if(l.isEmpty) {
       // return the smallest int possible in Scala
       -2147483648
     }else{
       val v = l.head
-      val next = bigger(l.tail)
+      val next = biggest(l.tail)
       if(v > next){
         v
       }else{
@@ -40,4 +40,22 @@ object ListExercises {
 
   }
 
+  def rm(xs: List[Int], value: Int): List[Int] = xs match {
+    case `value` :: tail =>  tail
+    case x :: tail => x :: rm(tail, value)
+    case _ => Nil
+  }
+
+  // gets the n biggest numbers in a list
+  def n_biggest(n: Int, l: List[Int]): List[Int] = {
+    if(n >= l.length){
+      l
+    }else if(n == 0){
+      Nil
+    }else{
+      val r1: List[Int] = List(l.max)
+      val r2: List[Int] = n_biggest(n - 1, rm(l, l.max))
+      r2 ++ r1
+    }
+  }
 }
