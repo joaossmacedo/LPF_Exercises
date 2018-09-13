@@ -115,4 +115,12 @@ object ListExercises {
       r2 ++ r1
     }
   }
+
+  // divide a list in the n position
+  // returns a list that contains:
+  // a list that contains all element before position n and
+  // a list that contains all element after position n
+  def divide(n: Int, l: List[Int]): List[List[Int]] = {
+    List(l.take(n), l.takeRight(l.length - n))
+  }
 }

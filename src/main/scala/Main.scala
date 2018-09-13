@@ -15,5 +15,11 @@ object Main {
     println("Bigger than " + i + " in " + list + ": " + ListExercises.bigger_than(i, list))
     println("Remove the last element of " + list + ": " + ListExercises.remove_last(list))
     println("Inverse of the " + list + ": " + ListExercises.invert(list))
+
+    val k = 4
+    println("\nFull list: " + list)
+    val d = ListExercises.divide(k, list)
+    println("0 - " + (k - 1) + ": " + d.head)
+    println(k  + " - " + (list.length - 1) + ": " + d(1))
   }
 }
