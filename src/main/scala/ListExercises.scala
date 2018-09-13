@@ -94,4 +94,14 @@ object ListExercises {
       bigger_than(n, l.tail)
     }
   }
+
+  def remove_last(l: List[Int]): List[Int] = {
+    if(l.tail.isEmpty){
+      Nil
+    }else{
+      val r1: List[Int] = List(l.head)
+      val r2: List[Int] = remove_last(l.tail)
+      r1 ++ r2
+    }
+  }
 }
