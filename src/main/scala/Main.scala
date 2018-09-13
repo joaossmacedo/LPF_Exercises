@@ -12,5 +12,6 @@ object Main {
     val list = List(1,2,4,2,4,7,3,2,4)
     println(i + " appear in " + list + ": " + ListExercises.count_occurrences(i, list) + " times")
     println("Is there a single occurrence of " + j + " in " + list + "? " + ListExercises.single_occurrence(j, list))
+    println("Bigger than " + i + " in " + list + ": " + ListExercises.bigger_than(i, list))
   }
 }

@@ -81,4 +81,17 @@ object ListExercises {
       false
     }
   }
+
+  // return a list of l elements bigger than n
+  def bigger_than(n: Int, l: List[Int]): List[Int] ={
+    if(l.isEmpty){
+      Nil
+    }else if(l.head > n){
+      val r1: List[Int] = List(l.head)
+      val r2: List[Int] = bigger_than(n, l.tail)
+      r1 ++ r2
+    }else{
+      bigger_than(n, l.tail)
+    }
+  }
 }
