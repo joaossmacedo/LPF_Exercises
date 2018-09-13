@@ -70,4 +70,15 @@ object ListExercises {
       1 + count_occurrences(v, l.tail)
     }
   }
+
+  // returns true if there is a single occurrence of v in l
+  // returns false if there is no occurrence of v in l
+  // or if there is more than one occurrence of v in l
+  def single_occurrence(v: Int, l: List[Int]): Boolean = {
+    if(count_occurrences(v, l) == 1){
+      true
+    }else{
+      false
+    }
+  }
 }
