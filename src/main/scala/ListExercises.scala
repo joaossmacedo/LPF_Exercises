@@ -104,4 +104,15 @@ object ListExercises {
       r1 ++ r2
     }
   }
+
+
+  def invert(l: List[Int]): List[Int] = {
+    if(l.isEmpty){
+      Nil
+    }else{
+      val r1: List[Int] = List(l.head)
+      val r2: List[Int] = invert(l.tail)
+      r2 ++ r1
+    }
+  }
 }
