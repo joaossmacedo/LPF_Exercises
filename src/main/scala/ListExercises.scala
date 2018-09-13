@@ -65,7 +65,7 @@ object ListExercises {
     if(l.isEmpty){
       0
     }else if(l.head != v){
-      count_occurrences(v, l.tail)
+      0 + count_occurrences(v, l.tail)
     }else{
       1 + count_occurrences(v, l.tail)
     }
