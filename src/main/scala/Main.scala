@@ -27,5 +27,7 @@ object Main {
     val l2 = List(3, 6, 5, 7)
     val l3 = List(9, 7, 5, 1, 3)
     println("Intersection between " + l2 + " and " + l3 + ": " + ListExercises.intersection(l2,l3))
+
+    println("The sequence of size " + 3 + " that starts on " + 4 + ": " + ListExercises.sequence(3,4))
   }
 }

@@ -139,4 +139,17 @@ object ListExercises {
       }
     }
   }
+
+  // returns a sequence that starts with m and has a lenght of n
+  def sequence(n: Int, m: Int): List[Int] = {
+    if (n == 0){
+      Nil
+    }else {
+      val r1 = List(m)
+      val r2 = sequence(n - 1, m + 1)
+      r1 ++ r2
+    }
+  }
+
+
 }
