@@ -1,3 +1,5 @@
+import javax.swing.JSpinner.ListEditor
+
 object Main {
   def main(args: Array[String]): Unit = {
     val l1 = List(1,2,3,4)
@@ -21,5 +23,9 @@ object Main {
     val d = ListExercises.divide(k, list)
     println("0 - " + (k - 1) + ": " + d.head)
     println(k  + " - " + (list.length - 1) + ": " + d(1))
+
+    val l2 = List(3, 6, 5, 7)
+    val l3 = List(9, 7, 5, 1, 3)
+    println("Intersection between " + l2 + " and " + l3 + ": " + ListExercises.intersection(l2,l3))
   }
 }

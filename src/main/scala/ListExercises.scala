@@ -123,4 +123,20 @@ object ListExercises {
   def divide(n: Int, l: List[Int]): List[List[Int]] = {
     List(l.take(n), l.takeRight(l.length - n))
   }
+
+  // return the intersection between l1 and l2
+  // l1 and l2 dont have repeated elements
+  def intersection(l1: List[Int], l2: List[Int]): List[Int] ={
+    if(l1.isEmpty){
+      Nil
+    }else{
+      val r2: List[Int] = intersection(l1.tail, l2)
+      if(l2.contains(l1.head)){
+        val r1: List[Int] = List(l1.head)
+        r1 ++ r2
+      }else {
+        r2
+      }
+    }
+  }
 }
