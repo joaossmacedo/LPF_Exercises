@@ -24,10 +24,12 @@ object Main {
     println("0 - " + (k - 1) + ": " + d.head)
     println(k  + " - " + (list.length - 1) + ": " + d(1))
 
-    val l2 = List(3, 6, 5, 7)
+    val l2 = List(3, 5, 6, 7)
     val l3 = List(9, 7, 5, 1, 3)
     println("Intersection between " + l2 + " and " + l3 + ": " + ListExercises.intersection(l2,l3))
 
     println("The sequence of size " + 3 + " that starts on " + 4 + ": " + ListExercises.sequence(3,4))
+
+    println("Is " + l3 + " in order? " + ListExercises.inOrder(l3))
   }
 }

@@ -151,5 +151,18 @@ object ListExercises {
     }
   }
 
+  // checks if a list is in order
+  def inOrder(l: List[Int]): Boolean = {
+    if (l.tail.isEmpty){
+      true
+    }else{
+      if(l.head < l.tail.head){
+        inOrder(l.tail)
+      }else{
+        false
+      }
+    }
+  }
+
 
 }
