@@ -21,21 +21,14 @@ object ListExercises {
 
   // return the biggest element
   // can'' use l.max()
-  def biggest(l: List[Int]): Int = {
-    if(l.isEmpty) {
-      // return the smallest int possible in Scala
-      -2147483648
-    }else{
-      val v = l.head
-      val next = biggest(l.tail)
-      if(v > next){
-        v
-      }else{
-        next
-      }
-    }
-
+  def biggest(l: List[Int]): Int = l match{
+    case Nil => -2147483648
+    case _ =>
+      val r = biggest(l.tail)
+      if(l.head > r) l.head
+      else r
   }
+
 
   // auxiliary method that returns the list without the value
   private def rm(xs: List[Int], value: Int): List[Int] = xs match {
