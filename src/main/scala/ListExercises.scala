@@ -14,12 +14,9 @@ object ListExercises {
 
   // return the size
   // can't use l.length()
-  def n_elements(l: List[Int]): Int ={
-    if(l.isEmpty){
-      0
-    }else{
-      1 + n_elements(l.tail)
-    }
+  def n_elements(l: List[Int]): Int = l match {
+    case Nil => 0
+    case _ => 1 + n_elements(l.tail)
   }
 
   // return the biggest element
