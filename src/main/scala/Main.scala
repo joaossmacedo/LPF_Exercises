@@ -31,5 +31,7 @@ object Main {
     println("The sequence of size " + 3 + " that starts on " + 4 + ": " + ListExercises.sequence(3,4))
 
     println("Is " + l3 + " in order? " + ListExercises.inOrder(l3))
+
+    println("9 added in position 2: " + ListExercises.addInOrder(l2, 9, 2))
   }
 }

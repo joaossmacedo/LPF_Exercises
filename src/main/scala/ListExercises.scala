@@ -151,6 +151,16 @@ object ListExercises {
     }
   }
 
+  def addInOrder(l: List[Int], v: Int, n: Int): List[Int] = {
+    if(n <= 0){
+      val r = List(v)
+      r ++ l
+    }else{
+      val r = List(l.head)
+      r ++ addInOrder(l.tail, v, n - 1)
+    }
+  }
+
   // checks if a list is in order
   def inOrder(l: List[Int]): Boolean = {
     if (l.tail.isEmpty){
@@ -163,6 +173,5 @@ object ListExercises {
       }
     }
   }
-
 
 }
