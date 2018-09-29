@@ -96,14 +96,9 @@ object ListExercises {
   }
 
 
-  def invert(l: List[Int]): List[Int] = {
-    if(l.isEmpty){
-      Nil
-    }else{
-      val r1: List[Int] = List(l.head)
-      val r2: List[Int] = invert(l.tail)
-      r2 ++ r1
-    }
+  def invert(l: List[Int]): List[Int] = l match {
+    case Nil => Nil
+    case _ => invert(l.tail) ++ List(l.head)
   }
 
   // divide a list in the n position
